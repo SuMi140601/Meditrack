@@ -1,27 +1,13 @@
 import {useState} from "react";
-// import{useNavigate} from "react-router-dom";
+
 import InputField from "../Components/InputField.";
 
 
  function AddPatient({ patients, setPatients})
  {
-   // const navigate = useNavigate();
+   
 
  const [status,setStatus] = useState("");
-//  .then(() => {
-//    setStatus("success");
-//    e.target.reset();
-//    setTimeout(() => {
-//       setStatus("");
-//    },3000);
-//  })
-//  .catch(() =>{
-//    setStatus("error");
-//    setTimeout(() => {
-//    setStatus("");
-// },3000);
-//  });
-
 
  const[formData, setformData] = useState({
     patientid: "",
@@ -86,8 +72,6 @@ return (
 {status === "error" && (
    <div className="bg-red-100 text-red-700 p-3 rounded mb-4">Failed to send message ❌</div>
 )}
-
-
       <h2 className=" text-2xl font-bold mb-6 text-center">Add Patient</h2>
    
            <form
@@ -119,7 +103,7 @@ return (
 <InputField
   type="date"
   name="dateofbirth"
-  placeholder="Date of Birth"
+  // placeholder="Date of Birth"
   value={formData.dateofbirth}
   onChange={handleChange}
 />
